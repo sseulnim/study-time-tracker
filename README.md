@@ -75,14 +75,21 @@ npm install
 
 # 개발 서버 실행
 npm run dev
+```
 
-빌드
-bash# 프로덕션 빌드
+### 빌드
+
+```bash
+# 프로덕션 빌드
 npm run build
 
 # 빌드 결과물 미리보기
 npm run preview
-📁 프로젝트 구조
+```
+
+## 📁 프로젝트 구조
+
+```
 study-time-tracker/
 ├── src/
 │   ├── components/          # React 컴포넌트
@@ -105,50 +112,51 @@ study-time-tracker/
 ├── vite.config.js          # Vite 설정
 ├── tailwind.config.js      # Tailwind 설정
 └── postcss.config.js       # PostCSS 설정
-💡 주요 구현 사항
-커스텀 훅
+```
 
-useLocalStorage: 로컬 스토리지와 React 상태 동기화
-useTimer: 타이머 로직 캡슐화
+## 💡 주요 구현 사항
 
-알람 기능
+### 커스텀 훅
+- `useLocalStorage`: 로컬 스토리지와 React 상태 동기화
+- `useTimer`: 타이머 로직 캡슐화
 
-Web Audio API를 사용한 사운드 알람
-Notification API를 사용한 브라우저 알림
+### 알람 기능
+- Web Audio API를 사용한 사운드 알람
+- Notification API를 사용한 브라우저 알림
 
-반응형 디자인
+### 반응형 디자인
+- 모바일, 태블릿, 데스크톱 대응
+- Tailwind CSS의 반응형 유틸리티 활용
 
-모바일, 태블릿, 데스크톱 대응
-Tailwind CSS의 반응형 유틸리티 활용
+## 🔍 트러블슈팅
 
-🔍 트러블슈팅
-Tailwind CSS 스타일 미적용 문제
+### Tailwind CSS 스타일 미적용 문제
+- **원인**: `@tailwindcss/postcss` 잘못된 패키지 설치
+- **해결**: `tailwindcss` 정식 패키지로 재설치
 
-원인: @tailwindcss/postcss 잘못된 패키지 설치
-해결: tailwindcss 정식 패키지로 재설치
+### localStorage 보안 경고
+- **원인**: `hasOwnProperty` 직접 호출
+- **해결**: `Object.prototype.hasOwnProperty.call()` 사용
 
-localStorage 보안 경고
+## 🌟 향후 개선 사항
 
-원인: hasOwnProperty 직접 호출
-해결: Object.prototype.hasOwnProperty.call() 사용
+- [ ] 주간/월간 통계 기능
+- [ ] 다크 모드 지원
+- [ ] PWA 지원
+- [ ] 데이터 시각화 (차트)
+- [ ] 백엔드 연동 (사용자 인증)
 
-🌟 향후 개선 사항
+## 📄 라이선스
 
- 주간/월간 통계 기능
- 다크 모드 지원
- PWA 지원
- 데이터 시각화 (차트)
- 백엔드 연동 (사용자 인증)
-
-📄 라이선스
 MIT License
-👨‍💻 개발자
-sseulnim
 
-GitHub: @sseulnim
+## 👨‍💻 개발자
 
+**sseulnim**
+- GitHub: [@sseulnim](https://github.com/sseulnim)
+
+---
 
 <div align="center">
   <sub>Built with ❤️ using React and Tailwind CSS</sub>
 </div>
-```
